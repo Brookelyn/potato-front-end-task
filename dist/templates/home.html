@@ -1,0 +1,26 @@
+<!-- <div class="container-fluid"> -->
+<div>
+  <ul>
+    <li ng-repeat="listing in listings" class="item">
+      
+      <!-- <div class="row item"> 
+         -->
+        <div class="image">
+          <img class="img-fluid" src="{{listing.media.m}}" />
+        </div>
+      
+        <div class="text">
+          <p class="title"><a href="">{{listing.title}}</a><p>
+          <p>Published: {{listing.date_taken}}</p>
+          <p>
+            <span class="author"><a href="https://www.flickr.com/people/{{listing.author_id}}">{{listing.author}}</a></span>
+            <span class="flickr-link"><a href="{{listing.link}}">View on Flickr</a></span>
+          </p>
+        </div>
+        
+     <!--  </div> -->
+
+    </li>
+  </ul>
+</div>
+

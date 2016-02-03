@@ -1,0 +1,67 @@
+$oswald: 'Oswald', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+
+html {
+  font-family: $opensans;
+}
+
+#header {
+  width: 100%;
+  padding-bottom: 5%;
+  border-bottom: 5px solid #001933;
+  padding-top: 4em;
+  margin-bottom: 2em;
+
+  h1 {
+    text-align: center;
+    font-family: $oswald;
+    font-size: 4em;
+  }
+}
+
+#content {
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+.item {
+  padding: 2% 0;
+  border-bottom: 1px solid #001933;
+
+  .image {
+    margin-right: 10px;
+    max-width: 200px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .text {
+
+    
+    .title {
+      font-family: $oswald;
+      font-size: 1em;
+      padding-bottom: 0.5em;
+
+      a {
+        text-decoration: none;
+        color: #000;
+        font-size: 1.5em;
+        cursor: pointer;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    
+  }
+
+  
+}
+
+
+
+@import "media";
