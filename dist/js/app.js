@@ -13,14 +13,16 @@ potato.config(['$stateProvider', '$locationProvider', function($stateProvider, $
   });
 
   $stateProvider.state('testing', {
-    url: '/',
+    url: '/detail',
     controller: 'mainPotato',
-    templateUrl: '/templates/testing.html'
+    templateUrl: '/templates/detail.html'
   });
 
 }]);
 
 
+
+// Factory to get data
 
 potato.factory('PotatoPics', function($http) {
   return {
@@ -38,15 +40,16 @@ potato.factory('PotatoPics', function($http) {
 
 
 
+
 // Homepage controller
 
 potato.controller('mainPotato', function($scope, $rootScope, PotatoPics) {
+  
   PotatoPics.getPics(function(data){
     $rootScope.listings = data.items;
   });
 
   
-
 
 });
 
