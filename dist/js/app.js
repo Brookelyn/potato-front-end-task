@@ -52,11 +52,4 @@ potato.controller('mainPotato', function($scope, $rootScope, PotatoPics) {
 
 });
 
-// Detail controller
-
-potato.controller('detailPotato', function($scope){
-  $scope.push(exampleDetail)
-})
-
-
 
