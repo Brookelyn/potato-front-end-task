@@ -76,7 +76,7 @@ html {
 #detail {
   
   .detail-header {
-    margin-bottom: 2%;
+    margin-bottom: 1em;
     
     h1 {
       font-family: $oswald;
@@ -115,11 +115,22 @@ html {
         max-width: 100%;
         max-height: 100%;
       }
+    }
+
+    .detail-text {
+      .description {
+        margin-bottom: 1em;
+      }
+
+      .tags {
+
+        span {
+          color: #737373;
+        }
+      }
+    }
   }
 }
-}
-
-
 
 
 

@@ -3,11 +3,11 @@
     <li ng-repeat="listing in listings" class="item">      
         
       <div class="image">
-        <img class="img-responsive" src="{{listing.media.m}}" />
+        <a href="/detail"><img class="img-responsive" src="{{listing.media.m}}"/></a>
       </div>      
     
       <div class="text">
-        <p class="title"><a href="">{{listing.title}}</a><p>
+        <p class="title"><a href="/detail">{{listing.title}}</a><p>
         
         <p>
           <span class="author"><a href="https://www.flickr.com/people/{{listing.author_id}}">{{listing.author}}</a></span>
