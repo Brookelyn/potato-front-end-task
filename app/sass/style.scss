@@ -5,6 +5,8 @@ html {
   font-family: $opensans;
 }
 
+// Header
+
 #header {
   width: 100%;
   padding-bottom: 5%;
@@ -24,50 +26,97 @@ html {
   max-width: 768px;
 }
 
-.item {
-  padding: 2% 0;
-  border-bottom: 1px solid #001933;
-  overflow: auto;
+#home {
 
-  .image {
-    margin-right: 10px;
-    width: 200px;
-    height: 150px;
-    float: left;
+  .item {
+    padding: 2% 0;
+    border-bottom: 1px solid #001933;
+    overflow: auto;
 
-    img {
+    .image {
+      margin-right: 10px;
+      width: 200px;
+      height: 150px;
+      float: left;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    .text {
+      vertical-align: top;
       max-width: 100%;
-      max-height: 100%;
+      
+    .title {
+      font-family: $oswald;
+      font-size: 1.5em;
+      padding-bottom: 0.5em;
+      
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;  
+
+      a {
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;  
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }  
+  }   
+  }  
+}
+
+
+#detail {
+  
+  .detail-header {
+    margin-bottom: 2%;
+    
+    h1 {
+      font-family: $oswald;
+      font-size: 2em;
+
+      a {
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;  
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    } 
+
+    .btn {
+      color: #737373;
+      text-decoration: none;
+      float: right;
+    } 
+
+    .btn:hover {
+      text-decoration: underline;
     }
   }
 
-  .text {
-    vertical-align: top;
-    max-width: 100%;
-    
-  .title {
-    font-family: $oswald;
-    font-size: 1em;
-    padding-bottom: 0.5em;
-    
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;  
+  .detail-content {
 
-    a {
-      text-decoration: none;
-      color: #000;
-      font-size: 1.5em;
-      cursor: pointer;  
-    }
+    .image {
+      margin-right: 10px;
+      max-width: 300px;
+      float: left;
 
-    a:hover {
-      text-decoration: underline;
-    }
-  }  
-    
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+  }
 }
-  
 }
 
 

@@ -16,35 +16,59 @@ html {
   margin: 0 auto;
   max-width: 768px; }
 
-.item {
+#home .item {
   padding: 2% 0;
   border-bottom: 1px solid #001933;
   overflow: auto; }
-  .item .image {
+  #home .item .image {
     margin-right: 10px;
     width: 200px;
     height: 150px;
     float: left; }
-    .item .image img {
+    #home .item .image img {
       max-width: 100%;
       max-height: 100%; }
-  .item .text {
+  #home .item .text {
     vertical-align: top;
     max-width: 100%; }
-    .item .text .title {
+    #home .item .text .title {
       font-family: 'Oswald', sans-serif;
-      font-size: 1em;
+      font-size: 1.5em;
       padding-bottom: 0.5em;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
-      .item .text .title a {
+      #home .item .text .title a {
         text-decoration: none;
         color: #000;
-        font-size: 1.5em;
         cursor: pointer; }
-      .item .text .title a:hover {
+      #home .item .text .title a:hover {
         text-decoration: underline; }
+
+#detail .detail-header {
+  margin-bottom: 2%; }
+  #detail .detail-header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em; }
+    #detail .detail-header h1 a {
+      text-decoration: none;
+      color: #000;
+      cursor: pointer; }
+    #detail .detail-header h1 a:hover {
+      text-decoration: underline; }
+  #detail .detail-header .btn {
+    color: #737373;
+    text-decoration: none;
+    float: right; }
+  #detail .detail-header .btn:hover {
+    text-decoration: underline; }
+#detail .detail-content .image {
+  margin-right: 10px;
+  max-width: 300px;
+  float: left; }
+  #detail .detail-content .image img {
+    max-width: 100%;
+    max-height: 100%; }
 
 @media screen and (max-width: 800px) {
   #header h1 {
