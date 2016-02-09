@@ -16,15 +16,15 @@ html {
   margin: 0 auto;
   max-width: 768px; }
 
+#home .row {
+  max-width: 100%;
+  overflow: hidden; }
 #home .item {
   padding: 2% 0;
   border-bottom: 1px solid #001933;
   overflow: auto; }
   #home .item .image {
-    margin-right: 10px;
-    width: 200px;
     max-height: 150px;
-    float: left;
     overflow: hidden; }
     #home .item .image img {
       width: 100%;
@@ -64,9 +64,7 @@ html {
   #detail .detail-header .btn:hover {
     text-decoration: underline; }
 #detail .detail-content .image {
-  margin-right: 10px;
-  max-width: 300px;
-  float: left; }
+  max-width: 300px; }
   #detail .detail-content .image img {
     max-width: 100%;
     max-height: 100%; }
@@ -74,11 +72,3 @@ html {
   margin-bottom: 1em; }
 #detail .detail-content .detail-text .tags span {
   color: #737373; }
-
-@media screen and (max-width: 800px) {
-  #header h1 {
-    font-size: 3em; }
-  #content {
-    padding: 0 1em 0 1em; }
-    #content .item .image {
-      max-width: 150px; } }

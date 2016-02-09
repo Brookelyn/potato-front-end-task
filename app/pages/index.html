@@ -11,7 +11,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.1/build/cssreset/cssreset-min.css"> 
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:700' rel='stylesheet' type='text/css'>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.css">
 
   <!-- AngularJS -->
@@ -20,6 +20,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.0/buzz.min.js"></script>
 
   <!-- Scripts -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src="/js/app.js"></script>
 </head>
 
@@ -29,7 +30,33 @@
   </div>
 
   <div id="content">
-    <div ui-view></div>
+    <!-- <div ui-view></div> -->
+
+    <div id="home" class="wrapper container-fluid">
+      <ul>
+        <li ng-repeat="listing in listings" class="item">      
+          <div class="row">  
+            
+            <div class="image col-xs-4 col-md-4">
+              <a href="/detail"><img class="img-responsive" src="{{listing.media.m}}"/></a>
+            </div>      
+          
+            <div class="text col-xs-8 col-md-8">
+              <p class="title"><a href="/detail">{{listing.title}}</a><p>
+              
+              <p>
+                <span class="author"><a href="https://www.flickr.com/people/{{listing.author_id}}">{{listing.author}}</a></span>
+                <span class="published">Published: {{listing.published}}</span>
+                <span class="flickr-link"><a href="{{listing.link}}">View on Flickr</a></span>
+              </p>
+            </div>
+            
+          </div>
+
+        </li>
+      </ul>
+    </div>
+
   </div>  
 </body>
 

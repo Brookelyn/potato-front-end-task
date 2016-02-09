@@ -28,49 +28,52 @@ html {
 
 #home {
 
-  .item {
-    padding: 2% 0;
-    border-bottom: 1px solid #001933;
-    overflow: auto;
+  .row {
+    max-width: 100%;
+    overflow: hidden;
+  }
 
-    .image {
-      margin-right: 10px;
-      width: 200px;
-      max-height: 150px;
-      float: left;
-      overflow: hidden;
+    .item {
+      padding: 2% 0;
+      border-bottom: 1px solid #001933;
+      overflow: auto;
 
-      img {
-        width: 100%;
-        height: 100%;
+      .image {
+        max-height: 150px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
+
+      .text {
+        vertical-align: top;
+        max-width: 100%;
+        
+        .title {
+          font-family: $oswald;
+          font-size: 1.5em;
+          padding-bottom: 0.5em;
+          
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;  
+
+          a {
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;  
+          }
+
+          a:hover {
+            text-decoration: underline;
+          }
+        }  
+      }   
     }
-
-    .text {
-      vertical-align: top;
-      max-width: 100%;
-      
-    .title {
-      font-family: $oswald;
-      font-size: 1.5em;
-      padding-bottom: 0.5em;
-      
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;  
-
-      a {
-        text-decoration: none;
-        color: #000;
-        cursor: pointer;  
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-    }  
-  }   
-  }  
+    
 }
 
 
@@ -108,9 +111,9 @@ html {
   .detail-content {
 
     .image {
-      margin-right: 10px;
+      // margin-right: 10px;
       max-width: 300px;
-      float: left;
+      // float: left;
 
       img {
         max-width: 100%;
@@ -135,4 +138,4 @@ html {
 
 
 
-@import "media";
+// @import "media";
