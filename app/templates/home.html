@@ -4,22 +4,22 @@
       <div class="row">  
         
         <div class="image col-xs-3 col-md-2 col-lg-4">
-          <a ui-sref="detail({id: $index})">
-            <img class="img-responsive" ng-src="{{listing.media.m}}"/>
+          <a ui-sref="detail({ id: $index })">
+            <img class="img-responsive" ng-src="{{ listing.media.m }}"/>
           </a>
         </div>      
       
         <div class="text col-xs-9 col-md-10 col-lg-8">
-          <p class="title"><a ui-sref="detail({id: $index})">{{listing.title}}</a><p>
+          <p class="title"><a ui-sref="detail({ id: $index })">{{ listing.title }}</a><p>
           <div class="row">
             <div class="col-xs-12 col-md-4 col-md-push-4">
-              <p class="published">Published: {{listing.published}}</p>
+              <p class="published">Published: {{ listing.published }}</p>
             </div>
             <div class="col-xs-6 col-md-4 col-md-pull-4">
-              <p class="author"><a href="https://www.flickr.com/people/{{listing.author_id}}">{{listing.author}}</a></p>
+              <p class="author"><a href="https://www.flickr.com/people/{{ listing.author_id }}">{{ listing.author }}</a></p>
             </div>
             <div class="col-xs-6 col-md-4">
-              <p class="flickr-link"><a href="{{listing.link}}">View on Flickr</a></p>
+              <p class="flickr-link"><a href="{{ listing.link }}">View on Flickr</a></p>
             </div>
           </div>
         </div>

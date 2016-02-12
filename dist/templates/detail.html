@@ -1,21 +1,21 @@
 <div id="detail">
   <div class="detail-header">
     <a class="btn btn-default" href="/" role="button">Back to results</a>
-    <h1><a href="#">{{listing.title}}</a></h1>
+    <h1><a href="#">{{ listing.title }}</a></h1>
     <p>
-      <span class="author"><a href="https://www.flickr.com/people/68987711@N06">nobody@flickr.com (wwnorm)</a></span>     |
-      <span class="published">Published: 2016-02-04T01:12:58Z</span>
+      <span class="author"><a href="https://www.flickr.com/people/{{ listing.author_id }}">{{ listing.author }}</a></span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <span class="published">Published: {{ listing.published }}</span>
     </p>
   </div>
   
-  <div class="detail-content">
-    <div class="image">
-      <img class="" src="https://farm2.staticflickr.com/1687/24176603603_78cb92d1a9.jpg" />
+  <div class="detail-content row">
+    <div class="image col-xs-12 col-md-4">
+      <img class="" ng-src="{{ listing.media.m }}" />
     </div>
-    <div class="detail-text">
+    <div class="detail-text col-xs-12 col-md-8">
       <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-      <p class="tags">Tags: <span>red</span> <span>potato</span> <span>picaday2016</span></p>
+      <p class="tags">Tags: {{ listing.tags }}</p>
     </div>
-
+  </div>
 
 </div>
