@@ -59,8 +59,8 @@ potato.factory('PotatoPics', function($http) {
 // Homepage controller
 potato.controller('mainPotato', function($scope, PotatoPics) {
   
-  PotatoPics.getPics(function(data){
-    $scope.listings = data.items;
+  PotatoPics.getPics(function(json){
+    $scope.listings = json.items;
   });
     
 });
