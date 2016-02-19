@@ -15,7 +15,7 @@
           <p class="title"><a ui-sref="detail({ id: $index })">{{ listing.title }}</a><p>
           <div class="row">
             <div class="col-xs-12 col-md-4 col-md-push-4">
-              <p class="published">Published: {{ listing.published }}</p>
+              <p class="published">Published: {{ listing.published | pubDate}}</p>
             </div>
             <div class="col-xs-6 col-md-4 col-md-pull-4">
               <p class="author"><a href="https://www.flickr.com/people/{{ listing.author_id }}">{{ listing.author | authorFilter}}</a></p>

@@ -77,8 +77,6 @@ potato.controller('detailPotato', function($scope, PotatoPics, $stateParams) {
   
   PotatoPics.getDetail($stateParams.id, function(data){
     $scope.listing = data;
-    var author = author;
-    console.log(author);
   });
     
 });
@@ -87,9 +85,64 @@ potato.controller('detailPotato', function($scope, PotatoPics, $stateParams) {
 potato.filter('authorFilter', function() {
   return function(author) {
     var string = author;
-    var authorString = string.substring(string.lastIndexOf("(")+1,string.lastIndexOf(")"));;
+    var authorString = string.substring(string.lastIndexOf("(")+1,string.lastIndexOf(")"));
     return authorString;
   }
 });
 
+potato.filter('pubDate', function() {
+  return function(published){
+    var fullDate = published;
+    var year = fullDate.substring(0,4);
+    var month = parseInt(fullDate.substring(5,7));
+    var day = fullDate.substring(8,10);
+    var time = fullDate.substring(fullDate.lastIndexOf("T")+1,fullDate.lastIndexOf(":"));
+
+    var dayLast = day.charAt(day.length - 1);
+    var timeFirst = time.charAt(0);
+    
+    if (dayLast === 1){
+      day = day + "st";
+    } else if (dayLast === 2) {
+      day = day + "nd";
+    } else {
+      day = day + "th";
+    }
+
+
+    // Converts month number to month
+    if (month === 01) {
+      month = "Jan";
+    } else if (month === 02){
+      month = "Feb";
+    } else if (month === 03){
+      month = "Mar";
+    } else if (month === 04){
+      month = "Apr";
+    } else if (month === 05){
+      month = "May";
+    } else if (month === 06){
+      month = "Jun";
+    } else if (month === 07){
+      month = "Jul";
+    } else if (month === 08){
+      month = "Aug";
+    } else if (month === 09){
+      month = "Sep";
+    } else if (month === 10){
+      month = "Oct";
+    } else if (month === 11){
+      month = "Nov";
+    } else if (month === 12){
+      month = "Dec";
+    }
+
+    
+
+
+
+    return day + " " + month + " " + year + " at " + time;
+  }
+
+});
 
