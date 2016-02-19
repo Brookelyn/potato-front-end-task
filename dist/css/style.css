@@ -24,12 +24,12 @@ html {
   border-bottom: 1px solid #001933;
   overflow: auto; }
   #home .item .image {
-    max-width: 100%;
+    width: 100%;
     max-height: 150px;
     overflow: hidden; }
     #home .item .image img {
       width: 100%;
-      height: 100%; }
+      overflow: hidden; }
   #home .item .text {
     vertical-align: top;
     max-width: 100%; }

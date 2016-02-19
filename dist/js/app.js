@@ -1,6 +1,7 @@
 var potato = angular.module("potato",  ["ui.router"]);
 
 
+
 // Set-up
 potato.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
@@ -19,6 +20,8 @@ potato.config(['$stateProvider', '$locationProvider', function($stateProvider, $
   });
 
 }]);
+
+
 
 // Factory to get data
 potato.factory('PotatoPics', function($http) {
@@ -56,6 +59,8 @@ potato.factory('PotatoPics', function($http) {
   };
 });
 
+
+
 // Homepage controller
 potato.controller('mainPotato', function($scope, PotatoPics) {
   
@@ -65,33 +70,26 @@ potato.controller('mainPotato', function($scope, PotatoPics) {
     
 });
 
+
+
+// Detail page controller
 potato.controller('detailPotato', function($scope, PotatoPics, $stateParams) {
   
   PotatoPics.getDetail($stateParams.id, function(data){
     $scope.listing = data;
+    var author = author;
+    console.log(author);
   });
     
 });
 
-// Published date filter
-potato.filter('datePublished', function(listing) {
-  return function(published) {
-    console.log(published);
+// Author date filter
+potato.filter('authorFilter', function() {
+  return function(author) {
+    var string = author;
+    var authorString = string.substring(string.lastIndexOf("(")+1,string.lastIndexOf(")"));;
+    return authorString;
   }
-})
+});
 
 
-// filter('reverse', function() {
-//   return function(input, uppercase) {
-//     input = input || '';
-//     var out = "";
-//     for (var i = 0; i < input.length; i++) {
-//       out = input.charAt(i) + out;
-//     }
-//     // conditional based on optional argument
-//     if (uppercase) {
-//       out = out.toUpperCase();
-//     }
-//     return out;
-//   };
-// })
