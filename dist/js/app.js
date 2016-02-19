@@ -100,7 +100,15 @@ potato.filter('pubDate', function() {
 
     var dayLast = day.charAt(day.length - 1);
     var timeFirst = time.charAt(0);
+
+
+    // Removes superfluous '0' from published time
+    if (timeFirst === "0") {
+      time = time.replace("0", "");
+    }
     
+
+    // Adds suffix to day
     if (dayLast === 1){
       day = day + "st";
     } else if (dayLast === 2) {
@@ -110,7 +118,7 @@ potato.filter('pubDate', function() {
     }
 
 
-    // Converts month number to month
+    // Converts month number to month name
     if (month === 01) {
       month = "Jan";
     } else if (month === 02){

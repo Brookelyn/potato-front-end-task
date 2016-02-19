@@ -99,6 +99,13 @@ potato.filter('pubDate', function() {
     var time = fullDate.substring(fullDate.lastIndexOf("T")+1,fullDate.lastIndexOf(":"));
 
     var dayLast = day.charAt(day.length - 1);
+    var timeFirst = time.charAt(0);
+
+
+    // Removes superfluous '0' from published time
+    if (timeFirst === "0") {
+      time = time.replace("0", "");
+    }
     
 
     // Adds suffix to day
