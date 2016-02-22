@@ -108,6 +108,8 @@ potato.filter('pubDate', function() {
       time = time.replace("0", "");
     }
 
+    day = parseInt(day);
+
     // Adds suffix to day
     if (dayLast === 1){
       day = day + "st";
@@ -146,5 +148,17 @@ potato.filter('pubDate', function() {
 
     return day + " " + month + " " + year + " at " + time;
   }
+});
 
+
+potato.filter('tagging', function($sce){
+  return function(tags){
+    var tagsHtml = "";
+    var list = tags.split(" ");
+
+    list.forEach(function(element, index, array){
+      tagsHtml += '<a href="https://www.flickr.com/search/?q= ' + element + '" class="tag">' + element + '</a>';
+    })
+    return $sce.trustAsHtml(tagsHtml);
+  }
 });
