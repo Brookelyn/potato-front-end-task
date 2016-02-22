@@ -90,6 +90,8 @@ potato.filter('authorFilter', function() {
   }
 });
 
+
+// Published date filter
 potato.filter('pubDate', function() {
   return function(published){
     var fullDate = published;
@@ -101,12 +103,10 @@ potato.filter('pubDate', function() {
     var dayLast = day.charAt(day.length - 1);
     var timeFirst = time.charAt(0);
 
-
     // Removes superfluous '0' from published time
     if (timeFirst === "0") {
       time = time.replace("0", "");
     }
-    
 
     // Adds suffix to day
     if (dayLast === 1){
@@ -116,7 +116,6 @@ potato.filter('pubDate', function() {
     } else {
       day = day + "th";
     }
-
 
     // Converts month number to month name
     if (month === 01) {
@@ -145,12 +144,7 @@ potato.filter('pubDate', function() {
       month = "Dec";
     }
 
-    
-
-
-
     return day + " " + month + " " + year + " at " + time;
   }
 
 });
-

@@ -40,30 +40,37 @@ html {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
-      #home .item .text .title a {
-        text-decoration: none;
-        color: #000;
-        cursor: pointer; }
-      #home .item .text .title a:hover {
-        text-decoration: underline; }
+    #home .item .text .author, #home .item .text .flickr-link {
+      font-family: 'Oswald', sans-serif;
+      color: #000; }
+    #home .item .text a {
+      text-decoration: none;
+      color: #000;
+      cursor: pointer; }
+    #home .item .text a:hover {
+      text-decoration: underline; }
 
 #detail .detail-header {
   margin-bottom: 1em; }
   #detail .detail-header h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 2em; }
-    #detail .detail-header h1 a {
-      text-decoration: none;
-      color: #000;
-      cursor: pointer; }
-    #detail .detail-header h1 a:hover {
-      text-decoration: underline; }
+  #detail .detail-header .author {
+    font-family: 'Oswald', sans-serif; }
+  #detail .detail-header a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer; }
+  #detail .detail-header a:hover {
+    text-decoration: underline; }
   #detail .detail-header .btn {
     color: #737373;
     text-decoration: none;
-    float: right; }
+    float: right;
+    border: none; }
   #detail .detail-header .btn:hover {
-    text-decoration: underline; }
+    text-decoration: underline;
+    background: #FFF; }
 #detail .detail-content .image {
   max-width: 300px; }
   #detail .detail-content .image img {
