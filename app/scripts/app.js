@@ -104,45 +104,47 @@ potato.filter('pubDate', function() {
     var timeFirst = time.charAt(0);
 
     // Removes superfluous '0' from published time
-    if (timeFirst === "0") {
+    if (timeFirst == "0") {
       time = time.replace("0", "");
     }
 
-    day = parseInt(day);
 
     // Adds suffix to day
-    if (dayLast === 1){
+    if (dayLast == 1){
       day = day + "st";
-    } else if (dayLast === 2) {
+    } else if (dayLast == 2) {
       day = day + "nd";
-    } else {
+    } else if (dayLast == 3){
+      day = day + "rd";
+    }
+    else {
       day = day + "th";
     }
 
     // Converts month number to month name
-    if (month === 01) {
+    if (month == 01) {
       month = "Jan";
-    } else if (month === 02){
+    } else if (month == 02){
       month = "Feb";
-    } else if (month === 03){
+    } else if (month == 03){
       month = "Mar";
-    } else if (month === 04){
+    } else if (month == 04){
       month = "Apr";
-    } else if (month === 05){
+    } else if (month == 05){
       month = "May";
-    } else if (month === 06){
+    } else if (month == 06){
       month = "Jun";
-    } else if (month === 07){
+    } else if (month == 07){
       month = "Jul";
-    } else if (month === 08){
+    } else if (month == 08){
       month = "Aug";
-    } else if (month === 09){
+    } else if (month == 09){
       month = "Sep";
-    } else if (month === 10){
+    } else if (month == 10){
       month = "Oct";
-    } else if (month === 11){
+    } else if (month == 11){
       month = "Nov";
-    } else if (month === 12){
+    } else if (month == 12){
       month = "Dec";
     }
 
